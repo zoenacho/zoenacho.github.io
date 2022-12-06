@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Javascript</title>
+      <script>
+        function add()
+        {
+          document.querySelector("#full").value
+         = parseFloat(document.querySelector("#first").value)
+         + parseFloat(document.querySelector("#second").value);
+        }
+        function subtract()
+        {
+          document.querySelector("#full").value
+          = parseFloat(document.querySelector("#first").value)
+          - parseFloat(document.querySelector("#second").value);
+        }
+        function multiply()
+        {
+          document.querySelector("#full").value
+          = parseFloat(document.querySelector("#first").value)
+          * parseFloat(document.querySelector("#second").value);
+        }
+        function divide ()
+        {
+          document.querySelector("#full").value
+          = parseFloat(document.querySelector("#first").value)
+          / parseFloat(document.querySelector("#second").value);
+        }
+        function doSum()
+        {
+          document.querySelector("#full").value
+          = parseFloat(document.querySelector("#third").value)
+          + parseFloat(document.querySelector("#fourth").value);
+          }
+          document.querySelector("#sumHere").innerHTML = "Your sum is: "+sum;
+        }
+      </script>
+   </head>
+   <body>
+      <form name=calculator>
+        <input type=text id="first">
+        <input type=button value="+" onclick="add();">
+        <input type=button value="-" onclick="subtract();">
+        <input type=button value="*" onclick="multiply();">
+        <input type=button value="/" onclick="divide();">
+        <input type=text id="second"> &nbsp; &nbsp; &nbsp; = &nbsp; &nbsp; &nbsp;
+        <input type=text id="full"><br>
+        Where would you like to start the summation? <input type=text id="third"><br>
+        Where would you like to end the summation? <input type=text id="fourth"><br>
+        <input type=button value="Here is your sum" onclick="doSum();">
+      </form>
+   </body>
+</html>
