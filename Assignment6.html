@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>Taylor Swift</title>
+    <script>
+      function choice()
+      {
+        alert("You have good taste");
+      }
+      function glue ()
+      {
+        document.TaylorSwift.full.value =
+              document.TaylorSwift.first.value
+            + document.TaylorSwift.second.value
+            + document.TaylorSwift.last.value;
+      }
+      function hey ()
+      {
+        document.querySelector("#changeText").innerHTML = "Go TS!" +
+        document.querySelector("#first").value;
+      }
+    </script>
+  </head>
+  <body>
+    <form name=TaylorSwift>
+      First name of artist: <input type=text id="Taylor"><br>
+      Middle name of artist: <input type=text id="Allison"><br>
+      Last name of artist: <input type=text id="Swift" onchange="glue();"><br>
+      Full name of artist: <input type=text id="TAS"><br>
+      <input type=checkbox>I<br>
+      <input type=checkbox>LOVE<br>
+      <input type=checkbox>TAYLOR<br>
+      <input type=checkbox onclick="choice();">SWIFT<br>
+      <input type=reset value="clear entries">
+    </form>
+    <div id=changeText>
+    Go TS!
+    </div>
+  </body>
+</html>
