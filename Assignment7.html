@@ -3,6 +3,22 @@
    <head>
       <title>Javascript</title>
       <script>
+        function makeRed ()
+        {
+          document.querySelector('body').style.backgroundColor="red";
+        }
+        function makeGreen ()
+        {
+          document.querySelector('body').style.backgroundColor="green"
+        }
+        function makeBlue ()
+        {
+          document.querySelector('body').style.backgroundColor="blue"
+        }
+        function makeWhite ()
+        {
+          document.querySelector('body').style.backgroundColor="white"
+        }
         function add()
         {
           document.querySelector("#full").value
@@ -32,12 +48,24 @@
           document.querySelector("#full").value
           = parseFloat(document.querySelector("#third").value)
           + parseFloat(document.querySelector("#fourth").value);
-          }
+          var start = parseInt(document.querySelector("#third").value);
+         var end = parseInt(document.querySelector("#fourth").value);
+         var sum=0;
+         for (var i=start; i<=end; i++) {
+           sum += i;
+         }
           document.querySelector("#sumHere").innerHTML = "Your sum is: "+sum;
         }
       </script>
    </head>
    <body>
+      <h1>Choose a Background Color</h1>
+      <form name=color>
+        <input type=button value="Make it Red!" onclick="makeRed();">
+        <input type=button value="Make it Green!" onclick="makeGreen();">
+        <input type=button value="Make it Blue!" onclick="makeBlue();">
+        <input type=button value="Back to White" onclick="makeWhite();"><br>
+      <h2>Calculator</h2>
       <form name=calculator>
         <input type=text id="first">
         <input type=button value="+" onclick="add();">
@@ -46,9 +74,14 @@
         <input type=button value="/" onclick="divide();">
         <input type=text id="second"> &nbsp; &nbsp; &nbsp; = &nbsp; &nbsp; &nbsp;
         <input type=text id="full"><br>
+        <h3> Summation! You Decide Where it Starts and Where it Ends</h3>
         Where would you like to start the summation? <input type=text id="third"><br>
         Where would you like to end the summation? <input type=text id="fourth"><br>
-        <input type=button value="Here is your sum" onclick="doSum();">
+        <input type=button value="Here is your sum" onclick="doSum();"><br>
+        <div id="#sumHere">
+        The loop sum is here
+        </div>
+        <input type=reset value="clear entries">
       </form>
    </body>
 </html>
