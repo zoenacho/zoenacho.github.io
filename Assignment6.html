@@ -9,10 +9,10 @@
       }
       function glue ()
       {
-        document.TaylorSwift.full.value =
-              document.TaylorSwift.first.value
-            + document.TaylorSwift.second.value
-            + document.TaylorSwift.last.value;
+        document.querySelector("#TAS").value =
+              document.querySelector("#Taylor").value
+            + document.querySelector("#Allison").value
+            + document.querySelector("#Swift").value;
       }
       function hey ()
       {
@@ -21,9 +21,10 @@
       }
     </script>
   </head>
-  <body>
+  <body bgcolor="purple">
+    <h1> Best Current Musical Artist </h1>
     <form name=TaylorSwift>
-      First name of artist: <input type=text id="Taylor"><br>
+      First name of artist: <input type=text id="Taylor" onchange="hey();"><br>
       Middle name of artist: <input type=text id="Allison"><br>
       Last name of artist: <input type=text id="Swift" onchange="glue();"><br>
       Full name of artist: <input type=text id="TAS"><br>
@@ -32,9 +33,9 @@
       <input type=checkbox>TAYLOR<br>
       <input type=checkbox onclick="choice();">SWIFT<br>
       <input type=reset value="clear entries">
+      <div id=changeText>
+      Go TS!
+      </div>
     </form>
-    <div id=changeText>
-    Go TS!
-    </div>
   </body>
 </html>
