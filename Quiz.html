@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Sufjan Stevens Quiz</title>
+    <script>
+    function changeImage()
+      {
+        var image = document.getElementById("myImage");
+        if (image.src.match("SufjanHandsUp")) {
+          image.src = "SufjanHandsDown.gif";
+        } else {
+          image.src = "SufjanHandsUp.gif";
+        }
+      }
+    function glue ()
+      {
+        document.querySelector("#CAL").value =
+              document.querySelector("#Carrie").value
+            + " "
+            + document.querySelector("#and").value
+            + " "
+            + document.querySelector("#Lowell").value;
+      }
+    function EYR(){
+        document.getElementById('myText').innerHTML = 'Wrong Answer';
+      }
+    function AOA(){
+        document.getElementById('myText').innerHTML = 'Try Again';
+      }
+    function TSC(){
+        document.getElementById('myText').innerHTML = '<b>Correct Answer</b>';
+      }
+    function ILL(){
+        document.getElementById('myText').innerHTML = 'Not quite';
+      }
+    function choice()
+      {
+        alert("You have good taste");
+      }
+    function choice()
+      {
+        alert("You have completed the quiz");
+      }
+    </script>
+    <style>
+    body {
+        background-color: lightblue;
+      }
+    h1 {
+        font-size: 50px;
+        font-family:cursive;
+      }
+    h2 {
+        font-size: 23px;
+        font-family:cursive;
+      }
+    p {
+        font-size: 18px;
+        font-family:monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="AbouttheArtist.html"><img src="HomeClick.jpeg" style="width:200px;height:200px;"></a>
+    <a href="VinylsforSale.html"><img src="VinylClick.jpeg" style="width:200px;height:200px;"></a>
+    <h1>For fun: Quiz about Sufjan Stevens</h1>
+    <h2>Hint, it might be helpful to read the home page first.</h2>
+      <form name=quiz>
+        <br> <!-- New line -->
+        <br> <!-- New line -->
+        <p>
+          <i><b>1. Can you figure out Sufjan Stevens' best album from the clues below?</b></i>
+        </p>
+        First name of Sufjan's mom: <input type=text id="Carrie"><br>
+        This _____ that, Tom ____ Jerry: <input type=text id="and"><br>
+        First name of Sufjan's stepfather: <input type=text id="Lowell" onchange="glue();"><br>
+        Put it all together... <input type=text id="CAL"><br>
+        <br> <!-- New line -->
+        <br> <!-- New line -->
+        <p>
+          <i><b>2. Can you click on the first album Sufjan Stevens released?</b></i>
+        </p>
+        <input type="button" onclick="EYR()" value="Enjoy Your Rabbit">
+        <input type="button"  onclick="AOA()" value="The Age of Adz">
+        <input type="button" onclick="TSC()" value="The Sun Came">
+        <input type="button"  onclick="ILL()" value="Illinois">
+        <p id="myText"></p><br>
+        <br> <!-- New line -->
+        <br> <!-- New line -->
+        <p>
+          <i><b>3. What is your personal favorite Sufjan Stevens song from the movie Call Me By Your Name?</b></i>
+        </p>
+        <input type="radio" name="Sufjan" value="MOL"> <i>Mystery of Love</i>
+        <input type="radio" name="Sufjan" value="VOG"> <i>Visions of Gideon</i>
+        <input type="radio" name="Sufjan" value="FDR"> <i>Futile Devices</i> (Doveman Remix)<br>
+        <br> <!-- New line -->
+        <br> <!-- New line -->
+        <p>
+          <i><b>4. Lastly, do you like Sufjan Stevens' music?</b></i>
+        </p>
+        <input type=checkbox>I<br>
+        <input type=checkbox>LOVE<br>
+        <input type=checkbox>SUFJAN<br>
+        <input type=checkbox onclick="choice();">STEVENS<br>
+        <input type="reset" value="Submit/Clear" onclick="choice();">
+        <p>
+          <b>Thanks for playing! For fun, can you click on the picture to make Sufjan clap?</b>
+        </p>
+          <img id="myImage" onclick="changeImage()" src="SufjanHandsDown.gif" width="500" height="250">
+      </form>
+  </body>
